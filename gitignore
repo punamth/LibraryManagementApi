@@ -1,0 +1,43 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# SQL Server LocalDB
+*.mdf
+*.ldf
+
+# EF Core migrations snapshot backups
+*.bak
+
+# NuGet
+packages/
+*.nupkg
+
+# Publish output
+publish/
+
+# Node modules (if using React/Angular frontend)
+node_modules/
+
+# Environment files
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
