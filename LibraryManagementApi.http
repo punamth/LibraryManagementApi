@@ -1,0 +1,50 @@
+@LibraryManagementApi_HostAddress = https://localhost:7xxx
+@token = your_jwt_token_here
+
+### Register
+POST {{LibraryManagementApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "email": "john@example.com",
+  "password": "Password123",
+  "role": "Student",
+  "studentName": "John Doe"
+}
+
+### Login
+POST {{LibraryManagementApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "emailOrUsername": "john@example.com",
+  "password": "Password123"
+}
+
+### Get all books
+GET {{LibraryManagementApi_HostAddress}}/api/books
+Authorization: Bearer {{token}}
+
+### Get available books
+GET {{LibraryManagementApi_HostAddress}}/api/books/available
+Authorization: Bearer {{token}}
+
+### Issue book
+POST {{LibraryManagementApi_HostAddress}}/api/transactions/issue
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "bookId": 1
+}
+
+### Return book
+POST {{LibraryManagementApi_HostAddress}}/api/transactions/return
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "transactionId": 1
+}
